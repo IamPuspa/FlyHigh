@@ -1,0 +1,28 @@
+table {
+  width: 100%;
+
+  tr:hover td {
+    background-color: white;
+    color: #673ab7;
+  }
+  
+  th {
+    font-size: 20px;
+    color: white;
+    padding-bottom: 20px;
+    text-align: center;
+    font-weight: normal;
+    border-bottom: 1px solid black;
+  }
+  td {
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+    cursor: pointer;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+  }
+}
+
+

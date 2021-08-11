@@ -1,0 +1,23 @@
+<div class="container  d-flex justify-content-center flex-column align-items-center">
+    <form class="example-form " [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+        <div *ngIf=" !successLogin && loginForm.valid && checkLogin">
+            <p class=" text-danger mb-4"> Wrong Credentials! Try Again..</p>
+        </div>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Employee ID</mat-label>
+            <input matInput placeholder="Ex. FHA1001" type="text" formControlName="employeeId" name="employeeId">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <mat-label>Password</mat-label>
+            <input matInput placeholder="Your login password" formControlName="password" name="password"
+                [type]=" hide ? 'password' : 'text'">
+            <mat-icon matSuffix (click)="hide = !hide" color="primary">{{hide ? 'visibility_off' : 'visibility'}}
+            </mat-icon>
+        </mat-form-field>
+        <div class="button-div d-flex justify-content-center align-items-center">
+            <button mat-raised-button color="primary" type="submit" [disabled]="!loginForm.valid">LOGIN</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,40 @@
+<div class="container">
+    <button mat-raised-button color="primary" (click)="goingback()" class="mt-3 mb-3"> Go Back</button>
+
+    <div class="passenger-info d-flex justify-content-center">
+        <form class="form">
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label class="label text-white text-decoration-underline"> Name</mat-label>
+                <input matInput class="input-value text-white " disabled value="{{passenger.name | uppercase}}">
+            </mat-form-field>
+
+            <mat-form-field class="example-half-width" appearance="fill">
+                <mat-label class="label text-white text-decoration-underline"> Seat Number</mat-label>
+                <input matInput class="input-value text-white" #seatNumber value="{{passenger.seatNo}}">
+            </mat-form-field>
+            <button mat-raised-button color="warn" class="ms-4" type="button" (click)="changeSeatNumber(seatNumber.value)">Change</button>
+
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label class="label text-white text-decoration-underline">Address</mat-label>
+                <input matInput  class="input-value text-white" disabled value="{{passenger.address}}">
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label class="label text-white text-decoration-underline">CheckedIN</mat-label>
+                <input matInput class="input-value text-white" disabled value="{{passenger.checkedInStatus}}" >
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label class="label text-white text-decoration-underline">Meals</mat-label>
+                <input matInput class="input-value text-white" disabled value="{{passenger.mealsOpted}}">
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label class="label text-white text-decoration-underline">Service</mat-label>
+                <input matInput class="input-value text-white" disabled value="{{passenger.services}}">
+            </mat-form-field>
+
+        </form>
+    </div>
+
+</div>

@@ -1,0 +1,15 @@
+.row-1 {
+  background-color: rgba(250, 250, 250, 0.541);
+  padding: 20px;
+
+  .seat-one, .seat-two {
+    input[type='checkbox'] {
+      width: 100px;
+      height: 50px;
+    }
+  }
+}
+
+.seat-remaining{
+    visibility: hidden;
+}

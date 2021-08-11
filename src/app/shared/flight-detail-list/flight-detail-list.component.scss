@@ -1,0 +1,14 @@
+.list:hover {
+  background-color: white;
+}
+.list {
+  font-size: 20px;
+  color: white;
+
+  &:hover {
+    color: #673ab7;
+  }
+}
+.list-table {
+  padding-top: 0px;
+}

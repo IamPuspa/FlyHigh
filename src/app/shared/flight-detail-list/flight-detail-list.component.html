@@ -1,0 +1,21 @@
+<div class="container">
+    <h2 class="text-center pt-3">Today's Scheduled Flight - {{day | date:'fullDate' | uppercase}}</h2>
+    <hr>
+    <mat-nav-list class="list-table transparent-bg-color">
+        <mat-list-item *ngFor=" let flight of flightsAvailable" (click)="showInfo(flight)"
+            class="list border-bottom border-dark">
+            <a matLine>{{flight.FromFlight}} <i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
+                {{flight.ToFlight}}</a>
+            <button mat-icon-button>
+                <mat-icon>info</mat-icon>
+            </button>
+        </mat-list-item>
+    </mat-nav-list>
+
+    <hr>
+    <h2 class="text-center"> Welcome High FLyioneers, please check out all the details before
+        boarding any flight. Fly High takes all the major steps just to ensure the quality and
+        safety of its employees and passengers. Happy Flying !
+    </h2>
+    <h3 class="text-center">For any queries, please reach out to our support team <u><i>+00 7623339255</i></u>.</h3>
+</div>
